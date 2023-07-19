@@ -16,10 +16,10 @@ npm install tailwindcss @acdh-oeaw/tailwindcss-preset
 // tailwind.config.ts
 
 import { type Config } from "tailwindcss";
-import preset from "@acdh-oeaw/tailwindcss-preset";
+import { preset } from "@acdh-oeaw/tailwindcss-preset";
 
 const config = {
-	config: ["./src/**/*.@(ts|tsx)"],
+	content: ["./src/**/*.@(ts|tsx)"],
 	presets: [preset],
 } satisfies Config;
 
