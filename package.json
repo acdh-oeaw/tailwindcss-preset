@@ -8,7 +8,7 @@
 	},
 	"main": "./src/preset.ts",
 	"files": [
-		"./src/preset.ts"
+		"./src/"
 	],
 	"packageManager": "pnpm@8.6.9",
 	"scripts": {
