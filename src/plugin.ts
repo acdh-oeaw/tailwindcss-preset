@@ -189,6 +189,9 @@ export const plugin = createPlugin(
 			iframe: {
 				border: "0",
 			},
+			p: {
+				textWrap: "pretty",
+			},
 			"[id]": {
 				scrollMarginBlockStart: "2ex",
 			},
