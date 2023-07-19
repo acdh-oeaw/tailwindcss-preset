@@ -1,5 +1,13 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.2
+
+### Patch Changes
+
+- [`e84572e`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/e84572e05b2495c43adf0809d6db154d1f4f66fd)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - include plugin and preset in npm
+  package
+
 ## 0.0.1
 
 ### Patch Changes
