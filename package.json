@@ -3,23 +3,23 @@
 	"version": "0.0.2",
 	"license": "MIT",
 	"type": "module",
-	"publishConfig": {
-		"access": "public"
-	},
 	"main": "./src/preset.ts",
 	"files": [
 		"./src/"
 	],
 	"packageManager": "pnpm@8.6.9",
 	"scripts": {
+		"changeset:add": "changeset add",
+		"changeset:status": "changeset status --verbose",
 		"ci:release": "changeset publish",
 		"format:check": "prettier . --cache --check --ignore-path ./.gitignore",
 		"format:fix": "pnpm run format:check --write",
 		"lint:check": "eslint . --cache --ignore-path ./.gitignore",
 		"lint:fix": "pnpm run lint:check --fix",
-		"prepare": "pnpm run setup",
-		"setup": "simple-git-hooks || exit 0",
-		"validate": "run-s format:check lint:check"
+		"prepare": "run-s setup",
+		"setup": "is-ci || simple-git-hooks",
+		"types:check": "tsc --noEmit",
+		"validate": "run-p format:check lint:check types:check"
 	},
 	"dependencies": {
 		"@tailwindcss/typography": "^0.5.9",
@@ -35,6 +35,7 @@
 		"@changesets/changelog-github": "^0.4.8",
 		"@changesets/cli": "^2.26.2",
 		"eslint": "^8.45.0",
+		"is-ci": "^3.0.1",
 		"lint-staged": "^13.2.3",
 		"npm-run-all2": "^6.0.6",
 		"prettier": "^3.0.0",
