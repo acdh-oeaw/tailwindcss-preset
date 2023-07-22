@@ -1,5 +1,15 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.3
+
+### Patch Changes
+
+- [`58cad6e`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/58cad6eefea0eb6d46db607a1cb4ac402b6bb46a)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - add classes for neutral colors
+
+- [`d88198f`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/d88198fb7395a9d3c9ca19438d65b2db453aebfc)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - avoid orphans in paragraphs
+
 ## 0.0.2
 
 ### Patch Changes
