@@ -1,5 +1,12 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.4
+
+### Patch Changes
+
+- [`562e256`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/562e2564823b91dddddcca71cebee71625031c74)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - use abbreviated border-radius sizes
+
 ## 0.0.3
 
 ### Patch Changes
