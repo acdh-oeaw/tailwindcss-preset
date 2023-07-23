@@ -14,9 +14,9 @@ export const plugin = createPlugin(
 				"--breakpoint-3xl": "120rem",
 
 				/** Border radius. */
-				"--radius-small": "2px",
-				"--radius-medium": "4px",
-				"--radius-large": "8px",
+				"--radius-sm": "2px",
+				"--radius-md": "4px",
+				"--radius-lg": "8px",
 
 				/** Colors. */
 				"--color-neutral-0": "240deg 0% 100%",
@@ -208,9 +208,9 @@ export const plugin = createPlugin(
 	{
 		theme: {
 			borderRadius: {
-				small: "var(--radius-small)",
-				medium: "var(--radius-medium)",
-				large: "var(--radius-large)",
+				sm: "var(--radius-sm)",
+				md: "var(--radius-md)",
+				lg: "var(--radius-lg)",
 			},
 			colors: {
 				transparent: "transparent",
