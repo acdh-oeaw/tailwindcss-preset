@@ -214,6 +214,7 @@ export const plugin = createPlugin(
 			},
 			colors: {
 				transparent: "transparent",
+				current: "currentColor",
 				white: "hsl(var(--color-neutral-0) / <alpha-value>)",
 				black: "hsl(var(--color-neutral-1000) / <alpha-value>)",
 				neutral: {
