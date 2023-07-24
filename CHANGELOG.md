@@ -1,5 +1,12 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.5
+
+### Patch Changes
+
+- [`98b0420`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/98b04206f57f1465f9e81be275aea0a7733b1efe)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - fix dark mode colors
+
 ## 0.0.4
 
 ### Patch Changes
