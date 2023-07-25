@@ -286,6 +286,7 @@ export const plugin = createPlugin(
 				"--color-rose-950": "343.10deg 87.65% 15.88%",
 
 				/** Neutral color. */
+				"--color-neutral-0": "0deg 0% 100%",
 				"--color-neutral-50": "var(--color-zinc-50)",
 				"--color-neutral-100": "var(--color-zinc-100)",
 				"--color-neutral-200": "var(--color-zinc-200)",
@@ -297,6 +298,7 @@ export const plugin = createPlugin(
 				"--color-neutral-800": "var(--color-zinc-800)",
 				"--color-neutral-900": "var(--color-zinc-900)",
 				"--color-neutral-950": "var(--color-zinc-950)",
+				"--color-neutral-1000": "0deg 0% 0%",
 
 				/** Typography. */
 				"--font-family-body": "var(--font-sans), ui-sans-serif, system-ui, sans-serif",
@@ -466,6 +468,7 @@ export const plugin = createPlugin(
 			colors: {
 				transparent: "transparent",
 				current: "currentColor",
+				inherit: "inherit",
 				white: "hsl(var(--color-neutral-0) / <alpha-value>)",
 				black: "hsl(var(--color-neutral-1000) / <alpha-value>)",
 				neutral: {
