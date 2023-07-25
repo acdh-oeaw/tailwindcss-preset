@@ -1,5 +1,12 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.6
+
+### Patch Changes
+
+- [`b30c2a2`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/b30c2a2cb324f24bd5cc49cb6943d67b885e5a3e)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - ensure full border radius is included
+
 ## 0.0.5
 
 ### Patch Changes
