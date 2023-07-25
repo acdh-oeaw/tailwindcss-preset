@@ -1,7 +1,7 @@
 import createPlugin from "tailwindcss/plugin";
 
 export const plugin = createPlugin(
-	({ addBase }) => {
+	({ addBase, matchUtilities, theme }) => {
 		addBase({
 			":root": {
 				/** Breakpoints. */
@@ -455,6 +455,16 @@ export const plugin = createPlugin(
 				},
 			},
 		});
+
+		matchUtilities(
+			{
+				s(value) {
+					return { width: value, height: value };
+				},
+			},
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+			{ values: theme("width")! },
+		);
 	},
 	{
 		theme: {
