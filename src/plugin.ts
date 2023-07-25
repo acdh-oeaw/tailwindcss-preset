@@ -1,7 +1,7 @@
 import createPlugin from "tailwindcss/plugin";
 
 export const plugin = createPlugin(
-	({ addBase, matchUtilities, theme }) => {
+	({ addBase, addUtilities, matchUtilities, theme }) => {
 		addBase({
 			":root": {
 				/** Breakpoints. */
@@ -465,6 +465,23 @@ export const plugin = createPlugin(
 			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 			{ values: theme("width")! },
 		);
+
+		matchUtilities(
+			{
+				"grid-fluid-cols"(value) {
+					return {
+						gridTemplateColumns: `repeat(var(--fluid-cols-repeat, auto-fill), minmax(${value}, 1fr))`,
+					};
+				},
+			},
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+			{ values: theme("width")! },
+		);
+
+		addUtilities({
+			".grid-fluid-cols-fit": { "--fluid-cols-repeat": "auto-fit" },
+			".grid-fluid-cols-fill": { "--fluid-cols-repeat": "auto-fill" },
+		});
 	},
 	{
 		theme: {
