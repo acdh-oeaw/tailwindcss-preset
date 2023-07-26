@@ -1,5 +1,15 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.8
+
+### Patch Changes
+
+- [`ae1032a`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/ae1032a1f8cd7ec76c37d5d9ad473eced1a15b72)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - change color naming scheme
+
+- [`2911dee`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/2911deea4d6f2eb6c043886270962d8d774e5b74)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - add grid-container utility
+
 ## 0.0.7
 
 ### Patch Changes

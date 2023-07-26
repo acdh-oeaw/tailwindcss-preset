@@ -1,6 +1,6 @@
 {
 	"name": "@acdh-oeaw/tailwindcss-preset",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"license": "MIT",
 	"type": "module",
 	"main": "./src/preset.ts",
