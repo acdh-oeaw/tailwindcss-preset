@@ -1,5 +1,21 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.7
+
+### Patch Changes
+
+- [`cd43111`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/cd43111e66269cd103f84b87b104d77e3fb8734e)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - ensure inherit color is included
+
+- [`ed15b6f`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/ed15b6f6f4ed155983c2c01137caec2aee4f63c5)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - add s- size utility
+
+- [`6ffaeee`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/6ffaeee7f26e544830982599fbff56129e8648ef)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - add more colors
+
+- [`defbb90`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/defbb904546b8184ff5946e690645c657020b01e)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - add fluid-cols- utility
+
 ## 0.0.6
 
 ### Patch Changes
