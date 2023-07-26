@@ -1,7 +1,7 @@
 import createPlugin from "tailwindcss/plugin";
 
 export const plugin = createPlugin(
-	({ addBase, addUtilities, matchUtilities, theme }) => {
+	({ addBase, addComponents, addUtilities, matchUtilities, theme }) => {
 		addBase({
 			":root": {
 				/** Breakpoints. */
@@ -482,6 +482,81 @@ export const plugin = createPlugin(
 			".grid-fluid-cols-fit": { "--fluid-cols-repeat": "auto-fit" },
 			".grid-fluid-cols-fill": { "--fluid-cols-repeat": "auto-fill" },
 		});
+
+		addComponents({
+			".container": {
+				width: "100%",
+				maxWidth: theme("screens.2xl"),
+				marginInline: "auto",
+				paddingInline: theme("spacing.8"),
+			},
+		});
+
+		addComponents({
+			".grid-container": {
+				display: "grid",
+				gridTemplateColumns:
+					"minmax(0, 1fr) min(var(--grid-container-width, theme(screens.2xl)), calc(100% - (2 * var(--grid-container-column-gap, theme(spacing.6))))) minmax(0, 1fr)",
+				rowGap: "var(--grid-container-row-gap, theme(spacing.12))",
+				columnGap: "var(--grid-container-column-gap, theme(spacing.4))",
+				overflow: "clip",
+				width: "100%",
+				paddingBottom: "var(--grid-container-row-gap, theme(spacing.12))",
+				"@media screen(md)": {
+					rowGap: "var(--grid-container-row-gap, theme(spacing.16))",
+					columnGap: "var(--grid-container-column-gap, theme(spacing.8))",
+					paddingBottom: "var(--grid-container-row-gap, theme(spacing.16))",
+				},
+				"@media screen(lg)": {
+					rowGap: "var(--grid-container-row-gap, theme(spacing.24))",
+					paddingBottom: "var(--grid-container-row-gap, theme(spacing.24))",
+				},
+				"& > *": {
+					gridColumn: "2",
+				},
+				"& > .bleed-full": {
+					gridColumn: "1 / -1",
+				},
+				"& > .bleed-start": {
+					gridColumn: "1 / 3",
+				},
+				"& > .bleed-end": {
+					gridColumn: "2 / -1",
+				},
+				"& > .bleed-none": {
+					gridColumn: "2 !important",
+				},
+			},
+		});
+
+		matchUtilities(
+			{
+				"grid-container-width"(value) {
+					return {
+						"--grid-container-width": value,
+					};
+				},
+			},
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+			{ values: theme("screens")! },
+		);
+
+		matchUtilities(
+			{
+				"grid-container-gap-x"(value) {
+					return {
+						"--grid-container-column-gap": value,
+					};
+				},
+				"grid-container-gap-y"(value) {
+					return {
+						"--grid-container-row-gap": value,
+					};
+				},
+			},
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+			{ values: theme("spacing")! },
+		);
 	},
 	{
 		theme: {
