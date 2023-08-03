@@ -557,6 +557,13 @@ export const plugin = createPlugin(
 			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 			{ values: theme("spacing")! },
 		);
+
+		/** @see https://github.com/w3c/csswg-drafts/issues/5813 */
+		addBase({
+			".grid > :empty": {
+				position: "absolute",
+			},
+		});
 	},
 	{
 		theme: {
