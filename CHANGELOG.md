@@ -1,5 +1,13 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.9
+
+### Patch Changes
+
+- [`757fbff`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/757fbff677f8a37ba543d6acc00cc1de216f0c03)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - take empty grid cells out of flow
+  layout to make gaps collapse
+
 ## 0.0.8
 
 ### Patch Changes
