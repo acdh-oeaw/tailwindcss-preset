@@ -674,10 +674,12 @@ export const plugin = createPlugin(
 				"2xl": "var(--breakpoint-2xl)",
 				"3xl": "var(--breakpoint-3xl)",
 			},
-			typography: {
-				DEFAULT: {
-					css: {
-						maxWidth: null,
+			extend: {
+				typography: {
+					DEFAULT: {
+						css: {
+							maxWidth: null,
+						},
 					},
 				},
 			},
