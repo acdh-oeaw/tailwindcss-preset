@@ -1,5 +1,16 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.10
+
+### Patch Changes
+
+- [`81b1eed`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/81b1eeda2baff021c7a26ef8f775c21b9b62245d)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - extend from typography styles
+
+- [`f17f456`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/f17f456f2653a032128aaa12986795ff8fbb3641)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - use correct vars for screens, use theme
+  fn for base styles
+
 ## 0.0.9
 
 ### Patch Changes
