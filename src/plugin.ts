@@ -407,14 +407,14 @@ export const plugin = createPlugin(
 				boxSizing: "border-box",
 				margin: "0",
 				padding: "0",
-				borderColor: "hsl(var(--color-border) / <alpha-value>)",
+				borderColor: theme("colors.border"),
 			},
 			":root": {
 				overflow: "hidden",
-				backgroundColor: "hsl(var(--color-background) / <alpha-value>)",
-				color: "hsl(var(--color-on-background) / <alpha-value>)",
-				fontSize: "var(--font-size-md)",
-				fontFamily: "var(--font-family-body)",
+				backgroundColor: theme("colors.background"),
+				color: theme("colors.on-background"),
+				fontSize: theme("fontSize.md"),
+				fontFamily: theme("fontFamily.body"),
 				overflowWrap: "break-word",
 				tabSize: "4",
 				blockSize: "100%",
@@ -431,7 +431,7 @@ export const plugin = createPlugin(
 				outline: "none",
 			},
 			":focus-visible": {
-				outline: "2px solid hsl(var(--color-focus-ring) / <alpha-value>)",
+				outline: "2px solid theme(colors.focus-ring)",
 				outlineOffset: "0",
 			},
 			"blockquote,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6": {
@@ -458,23 +458,23 @@ export const plugin = createPlugin(
 
 		matchUtilities(
 			{
-				s(value) {
+				s(value: string) {
 					return { width: value, height: value };
 				},
 			},
-			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+
 			{ values: theme("width")! },
 		);
 
 		matchUtilities(
 			{
-				"grid-fluid-cols"(value) {
+				"grid-fluid-cols"(value: string) {
 					return {
 						gridTemplateColumns: `repeat(var(--fluid-cols-repeat, auto-fill), minmax(${value}, 1fr))`,
 					};
 				},
 			},
-			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+
 			{ values: theme("width")! },
 		);
 
@@ -486,75 +486,101 @@ export const plugin = createPlugin(
 		addComponents({
 			".container": {
 				width: "100%",
-				maxWidth: theme("screens.2xl"),
+				maxWidth: "var(--container-width, theme(screens.2xl))",
 				marginInline: "auto",
 				paddingInline: theme("spacing.8"),
 			},
 		});
 
+		matchUtilities(
+			{
+				"container-width"(value: string) {
+					return {
+						"--container-width": value,
+					};
+				},
+			},
+
+			{ values: theme("screens")! },
+		);
+
 		addComponents({
 			".grid-container": {
+				"--_grid-container-width": "var(--grid-container-width, theme(screens.2xl))",
+				"--_grid-container-columns": "var(--grid-container-columns, 1)",
+				"--_grid-container-row-gap": "var(--grid-container-row-gap, theme(spacing.12))",
+				"--_grid-container-column-gap": "var(--grid-container-column-gap, theme(spacing.4))",
 				display: "grid",
 				gridTemplateColumns:
-					"minmax(0, 1fr) min(var(--grid-container-width, theme(screens.2xl)), calc(100% - (2 * var(--grid-container-column-gap, theme(spacing.6))))) minmax(0, 1fr)",
-				rowGap: "var(--grid-container-row-gap, theme(spacing.12))",
-				columnGap: "var(--grid-container-column-gap, theme(spacing.4))",
+					"minmax(0, 1fr) repeat(var(--_grid-container-columns), minmax(0, calc((var(--_grid-container-width) - (var(--_grid-container-columns) - 1) * var(--_grid-container-column-gap)) / var(--_grid-container-columns)))) minmax(0, 1fr)",
+				rowGap: "var(--_grid-container-row-gap)",
+				columnGap: "var(--_grid-container-column-gap)",
 				overflow: "clip",
 				width: "100%",
-				paddingBottom: "var(--grid-container-row-gap, theme(spacing.12))",
+				paddingBottom: "var(--_grid-container-row-gap)",
 				"@media screen(md)": {
-					rowGap: "var(--grid-container-row-gap, theme(spacing.16))",
-					columnGap: "var(--grid-container-column-gap, theme(spacing.8))",
-					paddingBottom: "var(--grid-container-row-gap, theme(spacing.16))",
+					"--_grid-container-row-gap": "var(--grid-container-row-gap, theme(spacing.16))",
+					"--_grid-container-column-gap": "var(--grid-container-column-gap, theme(spacing.8))",
 				},
 				"@media screen(lg)": {
-					rowGap: "var(--grid-container-row-gap, theme(spacing.24))",
-					paddingBottom: "var(--grid-container-row-gap, theme(spacing.24))",
+					"--_grid-container-row-gap": "var(--grid-container-row-gap, theme(spacing.24))",
 				},
 				"& > *": {
-					gridColumn: "2",
+					gridColumn: "2 / -2",
 				},
 				"& > .bleed-full": {
 					gridColumn: "1 / -1",
 				},
 				"& > .bleed-start": {
-					gridColumn: "1 / 3",
+					gridColumn: "1 / -2",
 				},
 				"& > .bleed-end": {
 					gridColumn: "2 / -1",
 				},
 				"& > .bleed-none": {
-					gridColumn: "2 !important",
+					gridColumn: "2 / -2 !important",
 				},
 			},
 		});
 
 		matchUtilities(
 			{
-				"grid-container-width"(value) {
+				"grid-container-width"(value: string) {
 					return {
 						"--grid-container-width": value,
 					};
 				},
 			},
-			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+
 			{ values: theme("screens")! },
 		);
 
 		matchUtilities(
 			{
-				"grid-container-gap-x"(value) {
+				"grid-container-columns"(value: string) {
+					return {
+						"--grid-container-columns": value,
+					};
+				},
+			},
+
+			{ values: theme("gridColumns")! },
+		);
+
+		matchUtilities(
+			{
+				"grid-container-gap-x"(value: string) {
 					return {
 						"--grid-container-column-gap": value,
 					};
 				},
-				"grid-container-gap-y"(value) {
+				"grid-container-gap-y"(value: string) {
 					return {
 						"--grid-container-row-gap": value,
 					};
 				},
 			},
-			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+
 			{ values: theme("spacing")! },
 		);
 
@@ -640,13 +666,13 @@ export const plugin = createPlugin(
 				"8xl": ["var(--font-size-8xl)", { lineHeight: "var(--line-height-8xl)" }],
 			},
 			screens: {
-				xs: "var(--breakpoints-xs)",
-				sm: "var(--breakpoints-sm)",
-				md: "var(--breakpoints-md)",
-				lg: "var(--breakpoints-lg)",
-				xl: "var(--breakpoints-xl)",
-				"2xl": "var(--breakpoints-2xl)",
-				"3xl": "var(--breakpoints-3xl)",
+				xs: "var(--breakpoint-xs)",
+				sm: "var(--breakpoint-sm)",
+				md: "var(--breakpoint-md)",
+				lg: "var(--breakpoint-lg)",
+				xl: "var(--breakpoint-xl)",
+				"2xl": "var(--breakpoint-2xl)",
+				"3xl": "var(--breakpoint-3xl)",
 			},
 			typography: {
 				DEFAULT: {
