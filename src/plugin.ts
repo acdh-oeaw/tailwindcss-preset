@@ -470,7 +470,7 @@ export const plugin = createPlugin(
 			{
 				"grid-fluid-cols"(value: string) {
 					return {
-						gridTemplateColumns: `repeat(var(--fluid-cols-repeat, auto-fill), minmax(${value}, 1fr))`,
+						gridTemplateColumns: `repeat(var(--fluid-columns-mode, auto-fill), minmax(${value}, 1fr))`,
 					};
 				},
 			},
@@ -479,8 +479,8 @@ export const plugin = createPlugin(
 		);
 
 		addUtilities({
-			".grid-fluid-cols-fit": { "--fluid-cols-repeat": "auto-fit" },
-			".grid-fluid-cols-fill": { "--fluid-cols-repeat": "auto-fill" },
+			".grid-fluid-cols-auto-fill": { "--fluid-columns-mode": "auto-fill" },
+			".grid-fluid-cols-auto-fit": { "--fluid-columns-mode": "auto-fit" },
 		});
 
 		addComponents({
@@ -557,7 +557,7 @@ export const plugin = createPlugin(
 
 		matchUtilities(
 			{
-				"grid-container-columns"(value: string) {
+				"grid-container-cols"(value: string) {
 					return {
 						"--grid-container-columns": value,
 					};
