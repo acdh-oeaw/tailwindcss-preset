@@ -1,5 +1,12 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.11
+
+### Patch Changes
+
+- [`42e4a63`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/42e4a63ffeab6cf459fb9227801c6f39e5da39c1)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - fix fluid columns grid
+
 ## 0.0.10
 
 ### Patch Changes
