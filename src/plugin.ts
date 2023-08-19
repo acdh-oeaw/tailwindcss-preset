@@ -301,7 +301,7 @@ export const plugin = createPlugin(
 				"--color-neutral-1000": "0deg 0% 0%",
 
 				/** Typography. */
-				"--font-family-body": "var(--font-sans), ui-sans-serif, system-ui, sans-serif",
+				"--font-family-body": "var(--font-sans, ui-sans-serif), system-ui, sans-serif",
 
 				/** Font sizes. */
 				"--font-size-2xs": "0.5rem",
@@ -407,12 +407,18 @@ export const plugin = createPlugin(
 				boxSizing: "border-box",
 				margin: "0",
 				padding: "0",
-				borderColor: theme("colors.border"),
+				// FIXME: @see https://github.com/tailwindlabs/tailwindcss/issues/9143#issuecomment-1684399533
+				// borderColor: theme("colors.border"),
+				"@apply border-border": "",
 			},
 			":root": {
 				overflow: "hidden",
-				backgroundColor: theme("colors.background"),
-				color: theme("colors.on-background"),
+				// FIXME: @see https://github.com/tailwindlabs/tailwindcss/issues/9143#issuecomment-1684399533
+				// backgroundColor: theme("colors.background"),
+				"@apply bg-background": "",
+				// FIXME: @see https://github.com/tailwindlabs/tailwindcss/issues/9143#issuecomment-1684399533
+				// color: theme("colors.on-background"),
+				"@apply text-on-background": "",
 				fontSize: theme("fontSize.md"),
 				fontFamily: theme("fontFamily.body"),
 				overflowWrap: "break-word",
@@ -434,8 +440,19 @@ export const plugin = createPlugin(
 				outline: "2px solid theme(colors.focus-ring)",
 				outlineOffset: "0",
 			},
+			a: {
+				textUnderlineOffset: "0.15em",
+			},
 			"blockquote,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6": {
 				textWrap: "balance",
+			},
+			dialog: {
+				// FIXME: @see https://github.com/tailwindlabs/tailwindcss/issues/9143#issuecomment-1684399533
+				// backgroundColor: theme("colors.background"),
+				"@apply bg-background": "",
+				// FIXME: @see https://github.com/tailwindlabs/tailwindcss/issues/9143#issuecomment-1684399533
+				// color: theme("colors.on-background"),
+				"@apply text-on-background": "",
 			},
 			iframe: {
 				border: "0",
