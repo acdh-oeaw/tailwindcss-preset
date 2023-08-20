@@ -454,6 +454,8 @@ export const plugin = createPlugin(
 				// color: theme("colors.on-background"),
 				"@apply text-on-background": "",
 			},
+			// TODO: `::backdrop` does not inherit custom properties from `:root`
+			// '::backdrop': {},
 			iframe: {
 				border: "0",
 			},
@@ -605,6 +607,46 @@ export const plugin = createPlugin(
 		addBase({
 			".grid > :empty": {
 				position: "absolute",
+			},
+		});
+
+		/** Typography. */
+		addBase({
+			".prose": {
+				"--tw-prose-body": "hsl(var(--color-neutral-700))",
+				"--tw-prose-headings": "hsl(var(--color-neutral-900))",
+				"--tw-prose-lead": "hsl(var(--color-neutral-600))",
+				"--tw-prose-links": "hsl(var(--color-neutral-900))",
+				"--tw-prose-bold": "hsl(var(--color-neutral-900))",
+				"--tw-prose-counters": "hsl(var(--color-neutral-500))",
+				"--tw-prose-bullets": "hsl(var(--color-neutral-300))",
+				"--tw-prose-hr": "hsl(var(--color-neutral-200))",
+				"--tw-prose-quotes": "hsl(var(--color-neutral-900))",
+				"--tw-prose-quote-borders": "hsl(var(--color-neutral-200))",
+				"--tw-prose-captions": "hsl(var(--color-neutral-500))",
+				"--tw-prose-code": "hsl(var(--color-neutral-900))",
+				"--tw-prose-pre-code": "hsl(var(--color-neutral-200))",
+				"--tw-prose-pre-bg": "hsl(var(--color-neutral-800))",
+				"--tw-prose-th-borders": "hsl(var(--color-neutral-300))",
+				"--tw-prose-td-borders": "hsl(var(--color-neutral-200))",
+			},
+			'[data-color-scheme="dark"] .prose': {
+				"--tw-prose-body": "hsl(var(--color-neutral-300))",
+				"--tw-prose-headings": "hsl(var(--color-neutral-0))",
+				"--tw-prose-lead": "hsl(var(--color-neutral-400))",
+				"--tw-prose-links": "hsl(var(--color-neutral-0))",
+				"--tw-prose-bold": "hsl(var(--color-neutral-0))",
+				"--tw-prose-counters": "hsl(var(--color-neutral-400))",
+				"--tw-prose-bullets": "hsl(var(--color-neutral-600))",
+				"--tw-prose-hr": "hsl(var(--color-neutral-700))",
+				"--tw-prose-quotes": "hsl(var(--color-gray-100))",
+				"--tw-prose-quote-borders": "hsl(var(--color-neutral-700))",
+				"--tw-prose-captions": "hsl(var(--color-neutral-400))",
+				"--tw-prose-code": "hsl(var(--color-neutral-0))",
+				"--tw-prose-pre-code": "hsl(var(--color-neutral-300))",
+				"--tw-prose-pre-bg": "hsl(var(--color-neutral-1000) / 0.5)",
+				"--tw-prose-th-borders": "hsl(var(--color-neutral-600))",
+				"--tw-prose-td-borders": "hsl(var(--color-neutral-700))",
 			},
 		});
 	},
