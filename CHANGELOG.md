@@ -1,5 +1,16 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.12
+
+### Patch Changes
+
+- [`c6c296d`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/c6c296df7b86a3dc32096360bda27ce4e172866a)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - add font fallback, work around upstream
+  alpha-channel issue, ensure dialog colors
+
+- [`6798e78`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/6798e788ffd075334decf2e2b289b896c7b4a6b6)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - add prose styles
+
 ## 0.0.11
 
 ### Patch Changes
