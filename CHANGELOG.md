@@ -1,5 +1,18 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.13
+
+### Patch Changes
+
+- [`8a3f417`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/8a3f417228135af68b4c2e1cd341ab09b9ab6fa2)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - disable built-in container component
+
+- [`7f64ae0`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/7f64ae051413655b08575dd67eacb27f904edb81)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - wrap components in :where()
+
+- [`d3027f1`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/d3027f1d27d6cfa90fe005d885acf5804646ebe5)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - accept breakpoints via options param
+
 ## 0.0.12
 
 ### Patch Changes
