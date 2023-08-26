@@ -503,11 +503,14 @@ export const plugin = createPlugin(
 		});
 
 		addComponents({
-			".container": {
+			":where(.container)": {
 				width: "100%",
 				maxWidth: "var(--container-width, theme(screens.2xl))",
 				marginInline: "auto",
-				paddingInline: theme("spacing.8"),
+				paddingInline: theme("spacing.4"),
+				"@media screen(md)": {
+					paddingInline: theme("spacing.8"),
+				},
 			},
 		});
 
@@ -524,7 +527,7 @@ export const plugin = createPlugin(
 		);
 
 		addComponents({
-			".grid-container": {
+			":where(.grid-container)": {
 				"--_grid-container-width": "var(--grid-container-width, theme(screens.2xl))",
 				"--_grid-container-columns": "var(--grid-container-columns, 1)",
 				"--_grid-container-row-gap": "var(--grid-container-row-gap, theme(spacing.12))",
@@ -605,14 +608,14 @@ export const plugin = createPlugin(
 
 		/** @see https://github.com/w3c/csswg-drafts/issues/5813 */
 		addBase({
-			".grid > :empty": {
+			":where(.grid > :empty)": {
 				position: "absolute",
 			},
 		});
 
 		/** Typography. */
 		addBase({
-			".prose": {
+			":where(.prose)": {
 				"--tw-prose-body": "hsl(var(--color-neutral-700))",
 				"--tw-prose-headings": "hsl(var(--color-neutral-900))",
 				"--tw-prose-lead": "hsl(var(--color-neutral-600))",
@@ -630,7 +633,7 @@ export const plugin = createPlugin(
 				"--tw-prose-th-borders": "hsl(var(--color-neutral-300))",
 				"--tw-prose-td-borders": "hsl(var(--color-neutral-200))",
 			},
-			'[data-color-scheme="dark"] .prose': {
+			':where([data-color-scheme="dark"] .prose)': {
 				"--tw-prose-body": "hsl(var(--color-neutral-300))",
 				"--tw-prose-headings": "hsl(var(--color-neutral-0))",
 				"--tw-prose-lead": "hsl(var(--color-neutral-400))",
