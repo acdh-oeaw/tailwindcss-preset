@@ -8,6 +8,9 @@ import { type Options } from "./types.js";
 export function createPreset(options?: Options) {
 	return {
 		content: [],
+		corePlugins: {
+			container: false,
+		},
 		darkMode: ["class", '[data-color-scheme="dark"]'],
 		plugins: [animatePlugin, typographyPlugin, createPlugin(options)],
 	} satisfies Config;
