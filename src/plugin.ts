@@ -477,6 +477,9 @@ export function createPlugin(options?: Options) {
 				p: {
 					textWrap: "pretty",
 				},
+				table: {
+					fontVariantNumeric: "tabular-nums",
+				},
 				"[id]": {
 					scrollMarginBlockStart: "2ex",
 				},
