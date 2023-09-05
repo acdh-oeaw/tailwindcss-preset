@@ -1,5 +1,19 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.14
+
+### Patch Changes
+
+- [`d80d17b`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/d80d17b74753a25d186be4445f5a55c94124acf9)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - remove default row gap in
+  grid-container
+
+- [`10e8989`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/10e8989cf12cca102f05954d7a63e37b9ac61822)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - enable tabular-nums in tables
+
+- [`cd5cb92`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/cd5cb92956fab28fba4f7f9bcbfc17cefdadf781)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - fix: change dark mode data attribute
+
 ## 0.0.13
 
 ### Patch Changes
