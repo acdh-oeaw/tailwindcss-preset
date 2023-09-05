@@ -385,7 +385,7 @@ export function createPlugin(options?: Options) {
 					"--color-input": "var(--color-neutral-200)",
 					"--color-focus-ring": "var(--color-neutral-400)",
 				},
-				":root[data-color-scheme=dark]": {
+				":root[data-ui-color-scheme=dark]": {
 					colorScheme: "dark",
 
 					/** Named colors. */
@@ -651,7 +651,7 @@ export function createPlugin(options?: Options) {
 					"--tw-prose-th-borders": "hsl(var(--color-neutral-300))",
 					"--tw-prose-td-borders": "hsl(var(--color-neutral-200))",
 				},
-				':where([data-color-scheme="dark"] .prose)': {
+				':where([data-ui-color-scheme="dark"] .prose)': {
 					"--tw-prose-body": "hsl(var(--color-neutral-300))",
 					"--tw-prose-headings": "hsl(var(--color-neutral-0))",
 					"--tw-prose-lead": "hsl(var(--color-neutral-400))",
