@@ -548,7 +548,7 @@ export function createPlugin(options?: Options) {
 				":where(.grid-container)": {
 					"--_grid-container-width": "var(--grid-container-width, theme(screens.2xl))",
 					"--_grid-container-columns": "var(--grid-container-columns, 1)",
-					"--_grid-container-row-gap": "var(--grid-container-row-gap, theme(spacing.12))",
+					"--_grid-container-row-gap": "var(--grid-container-row-gap, 0)",
 					"--_grid-container-column-gap": "var(--grid-container-column-gap, theme(spacing.4))",
 					display: "grid",
 					gridTemplateColumns:
@@ -557,13 +557,9 @@ export function createPlugin(options?: Options) {
 					columnGap: "var(--_grid-container-column-gap)",
 					overflow: "clip",
 					width: "100%",
-					paddingBottom: "var(--_grid-container-row-gap)",
+					paddingBlock: "var(--_grid-container-row-gap)",
 					"@media screen(md)": {
-						"--_grid-container-row-gap": "var(--grid-container-row-gap, theme(spacing.16))",
 						"--_grid-container-column-gap": "var(--grid-container-column-gap, theme(spacing.8))",
-					},
-					"@media screen(lg)": {
-						"--_grid-container-row-gap": "var(--grid-container-row-gap, theme(spacing.24))",
 					},
 					"& > *": {
 						gridColumn: "2 / -2",
@@ -578,7 +574,7 @@ export function createPlugin(options?: Options) {
 						gridColumn: "2 / -1",
 					},
 					"& > :where(.bleed-none)": {
-						gridColumn: "2 / -2 !important",
+						gridColumn: "2 / -2",
 					},
 				},
 			});
