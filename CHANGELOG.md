@@ -1,5 +1,13 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.15
+
+### Patch Changes
+
+- [`6017aca`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/6017aca5e292947acee4e22df667eea5a5bbbd88)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - add scaling factor for spacing and
+  typography scales
+
 ## 0.0.14
 
 ### Patch Changes
