@@ -1,5 +1,12 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.16
+
+### Patch Changes
+
+- [`737cb61`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/737cb61601f9d6c9861791be2a4fb9bfec5a3be4)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - fix scaling values
+
 ## 0.0.15
 
 ### Patch Changes
