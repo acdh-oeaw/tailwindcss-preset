@@ -1,6 +1,6 @@
 import plugin from "tailwindcss/plugin";
 
-import { type Options } from "./types.js";
+import type { Options } from "./types.js";
 
 export function createPlugin(options?: Options) {
 	/**
@@ -338,20 +338,20 @@ export function createPlugin(options?: Options) {
 					"--font-size-9xl": "calc(8rem * var(--ui-scaling-factor))",
 
 					/** Line heights. */
-					"--line-height-2xs": "calc(0.75rem, var(--ui-scaling-factor))",
-					"--line-height-xs": "calc(1rem, var(--ui-scaling-factor))",
-					"--line-height-sm": "calc(1.25rem, var(--ui-scaling-factor))",
-					"--line-height-md": "calc(1.5rem, var(--ui-scaling-factor))",
-					"--line-height-lg": "calc(1.75rem, var(--ui-scaling-factor))",
-					"--line-height-xl": "calc(1.75rem, var(--ui-scaling-factor))",
-					"--line-height-2xl": "calc(2rem, var(--ui-scaling-factor))",
-					"--line-height-3xl": "calc(2.25rem, var(--ui-scaling-factor))",
-					"--line-height-4xl": "calc(2.5rem, var(--ui-scaling-factor))",
-					"--line-height-5xl": "calc(3rem, var(--ui-scaling-factor))",
-					"--line-height-6xl": "calc(3.75rem, var(--ui-scaling-factor))",
-					"--line-height-7xl": "calc(4.5rem, var(--ui-scaling-factor))",
-					"--line-height-8xl": "calc(6rem, var(--ui-scaling-factor))",
-					"--line-height-9xl": "calc(8rem, var(--ui-scaling-factor))",
+					"--line-height-2xs": "calc(0.75rem * var(--ui-scaling-factor))",
+					"--line-height-xs": "calc(1rem * var(--ui-scaling-factor))",
+					"--line-height-sm": "calc(1.25rem * var(--ui-scaling-factor))",
+					"--line-height-md": "calc(1.5rem * var(--ui-scaling-factor))",
+					"--line-height-lg": "calc(1.75rem * var(--ui-scaling-factor))",
+					"--line-height-xl": "calc(1.75rem * var(--ui-scaling-factor))",
+					"--line-height-2xl": "calc(2rem * var(--ui-scaling-factor))",
+					"--line-height-3xl": "calc(2.25rem * var(--ui-scaling-factor))",
+					"--line-height-4xl": "calc(2.5rem * var(--ui-scaling-factor))",
+					"--line-height-5xl": "calc(3rem * var(--ui-scaling-factor))",
+					"--line-height-6xl": "calc(3.75rem * var(--ui-scaling-factor))",
+					"--line-height-7xl": "calc(4.5rem * var(--ui-scaling-factor))",
+					"--line-height-8xl": "calc(6rem * var(--ui-scaling-factor))",
+					"--line-height-9xl": "calc(8rem * var(--ui-scaling-factor))",
 
 					/** Spacing scale. */
 					"--space-0": "0",
