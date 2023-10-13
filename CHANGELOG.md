@@ -1,5 +1,12 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.17
+
+### Patch Changes
+
+- [`32973e5`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/32973e5231bf90d24adcab408ef80a80cfc37763)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - fix incorrect calc
+
 ## 0.0.16
 
 ### Patch Changes
