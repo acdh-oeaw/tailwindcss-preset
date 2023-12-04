@@ -1,0 +1,28 @@
+/**
+ * Scaling factors.
+ * ------------------------------------------------------------------------------------------------
+ *
+ * We intentionally don't put custom properties on `:root`.
+ *
+ * @see https://moderncss.dev/how-custom-property-values-are-computed/#enabling-extendable-custom-property-values
+ */
+
+:where([data-ui][data-ui-scale="90%"]) {
+	--scaling-factor: 90%;
+}
+
+:where([data-ui][data-ui-scale="95%"]) {
+	--scaling-factor: 95%;
+}
+
+:where([data-ui][data-ui-scale="100%"]) {
+	--scaling-factor: 100%;
+}
+
+:where([data-ui][data-ui-scale="105%"]) {
+	--scaling-factor: 105%;
+}
+
+:where([data-ui][data-ui-scale="110%"]) {
+	--scaling-factor: 110%;
+}

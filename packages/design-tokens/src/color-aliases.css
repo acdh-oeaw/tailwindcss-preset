@@ -1,0 +1,162 @@
+/**
+ * Color aliases.
+ * ------------------------------------------------------------------------------------------------
+ */
+
+:where([data-ui]) {
+	/** Neutral. */
+	--color-neutral-1: var(--color-slate-1);
+	--color-neutral-2: var(--color-slate-2);
+	--color-neutral-3: var(--color-slate-3);
+	--color-neutral-4: var(--color-slate-4);
+	--color-neutral-5: var(--color-slate-5);
+	--color-neutral-6: var(--color-slate-6);
+	--color-neutral-7: var(--color-slate-7);
+	--color-neutral-8: var(--color-slate-8);
+	--color-neutral-9: var(--color-slate-9);
+	--color-neutral-10: var(--color-slate-10);
+	--color-neutral-11: var(--color-slate-11);
+	--color-neutral-12: var(--color-slate-12);
+	--color-neutral-a1: var(--color-slate-a1);
+	--color-neutral-a2: var(--color-slate-a2);
+	--color-neutral-a3: var(--color-slate-a3);
+	--color-neutral-a4: var(--color-slate-a4);
+	--color-neutral-a5: var(--color-slate-a5);
+	--color-neutral-a6: var(--color-slate-a6);
+	--color-neutral-a7: var(--color-slate-a7);
+	--color-neutral-a8: var(--color-slate-a8);
+	--color-neutral-a9: var(--color-slate-a9);
+	--color-neutral-a10: var(--color-slate-a10);
+	--color-neutral-a11: var(--color-slate-a11);
+	--color-neutral-a12: var(--color-slate-a12);
+
+	/** Accent. */
+	--color-accent-1: var(--color-neutral-1);
+	--color-accent-2: var(--color-neutral-2);
+	--color-accent-3: var(--color-neutral-3);
+	--color-accent-4: var(--color-neutral-4);
+	--color-accent-5: var(--color-neutral-5);
+	--color-accent-6: var(--color-neutral-6);
+	--color-accent-7: var(--color-neutral-7);
+	--color-accent-8: var(--color-neutral-8);
+	--color-accent-9: var(--color-neutral-9);
+	--color-accent-10: var(--color-neutral-10);
+	--color-accent-11: var(--color-neutral-11);
+	--color-accent-12: var(--color-neutral-12);
+	--color-accent-a1: var(--color-neutral-a1);
+	--color-accent-a2: var(--color-neutral-a2);
+	--color-accent-a3: var(--color-neutral-a3);
+	--color-accent-a4: var(--color-neutral-a4);
+	--color-accent-a5: var(--color-neutral-a5);
+	--color-accent-a6: var(--color-neutral-a6);
+	--color-accent-a7: var(--color-neutral-a7);
+	--color-accent-a8: var(--color-neutral-a8);
+	--color-accent-a9: var(--color-neutral-a9);
+	--color-accent-a10: var(--color-neutral-a10);
+	--color-accent-a11: var(--color-neutral-a11);
+	--color-accent-a12: var(--color-neutral-a12);
+
+	/** Informative. */
+	--color-informative-1: var(--color-blue-1);
+	--color-informative-2: var(--color-blue-2);
+	--color-informative-3: var(--color-blue-3);
+	--color-informative-4: var(--color-blue-4);
+	--color-informative-5: var(--color-blue-5);
+	--color-informative-6: var(--color-blue-6);
+	--color-informative-7: var(--color-blue-7);
+	--color-informative-8: var(--color-blue-8);
+	--color-informative-9: var(--color-blue-9);
+	--color-informative-10: var(--color-blue-10);
+	--color-informative-11: var(--color-blue-11);
+	--color-informative-12: var(--color-blue-12);
+	--color-informative-a1: var(--color-blue-a1);
+	--color-informative-a2: var(--color-blue-a2);
+	--color-informative-a3: var(--color-blue-a3);
+	--color-informative-a4: var(--color-blue-a4);
+	--color-informative-a5: var(--color-blue-a5);
+	--color-informative-a6: var(--color-blue-a6);
+	--color-informative-a7: var(--color-blue-a7);
+	--color-informative-a8: var(--color-blue-a8);
+	--color-informative-a9: var(--color-blue-a9);
+	--color-informative-a10: var(--color-blue-a10);
+	--color-informative-a11: var(--color-blue-a11);
+	--color-informative-a12: var(--color-blue-a12);
+
+	/** Negative. */
+	--color-negative-1: var(--color-red-1);
+	--color-negative-2: var(--color-red-2);
+	--color-negative-3: var(--color-red-3);
+	--color-negative-4: var(--color-red-4);
+	--color-negative-5: var(--color-red-5);
+	--color-negative-6: var(--color-red-6);
+	--color-negative-7: var(--color-red-7);
+	--color-negative-8: var(--color-red-8);
+	--color-negative-9: var(--color-red-9);
+	--color-negative-10: var(--color-red-10);
+	--color-negative-11: var(--color-red-11);
+	--color-negative-12: var(--color-red-12);
+	--color-negative-a1: var(--color-red-a1);
+	--color-negative-a2: var(--color-red-a2);
+	--color-negative-a3: var(--color-red-a3);
+	--color-negative-a4: var(--color-red-a4);
+	--color-negative-a5: var(--color-red-a5);
+	--color-negative-a6: var(--color-red-a6);
+	--color-negative-a7: var(--color-red-a7);
+	--color-negative-a8: var(--color-red-a8);
+	--color-negative-a9: var(--color-red-a9);
+	--color-negative-a10: var(--color-red-a10);
+	--color-negative-a11: var(--color-red-a11);
+	--color-negative-a12: var(--color-red-a12);
+
+	/** Notice. */
+	--color-notice-1: var(--color-amber-1);
+	--color-notice-2: var(--color-amber-2);
+	--color-notice-3: var(--color-amber-3);
+	--color-notice-4: var(--color-amber-4);
+	--color-notice-5: var(--color-amber-5);
+	--color-notice-6: var(--color-amber-6);
+	--color-notice-7: var(--color-amber-7);
+	--color-notice-8: var(--color-amber-8);
+	--color-notice-9: var(--color-amber-9);
+	--color-notice-10: var(--color-amber-10);
+	--color-notice-11: var(--color-amber-11);
+	--color-notice-12: var(--color-amber-12);
+	--color-notice-a1: var(--color-amber-a1);
+	--color-notice-a2: var(--color-amber-a2);
+	--color-notice-a3: var(--color-amber-a3);
+	--color-notice-a4: var(--color-amber-a4);
+	--color-notice-a5: var(--color-amber-a5);
+	--color-notice-a6: var(--color-amber-a6);
+	--color-notice-a7: var(--color-amber-a7);
+	--color-notice-a8: var(--color-amber-a8);
+	--color-notice-a9: var(--color-amber-a9);
+	--color-notice-a10: var(--color-amber-a10);
+	--color-notice-a11: var(--color-amber-a11);
+	--color-notice-a12: var(--color-amber-a12);
+
+	/** Positive. */
+	--color-positive-1: var(--color-green-1);
+	--color-positive-2: var(--color-green-2);
+	--color-positive-3: var(--color-green-3);
+	--color-positive-4: var(--color-green-4);
+	--color-positive-5: var(--color-green-5);
+	--color-positive-6: var(--color-green-6);
+	--color-positive-7: var(--color-green-7);
+	--color-positive-8: var(--color-green-8);
+	--color-positive-9: var(--color-green-9);
+	--color-positive-10: var(--color-green-10);
+	--color-positive-11: var(--color-green-11);
+	--color-positive-12: var(--color-green-12);
+	--color-positive-a1: var(--color-green-a1);
+	--color-positive-a2: var(--color-green-a2);
+	--color-positive-a3: var(--color-green-a3);
+	--color-positive-a4: var(--color-green-a4);
+	--color-positive-a5: var(--color-green-a5);
+	--color-positive-a6: var(--color-green-a6);
+	--color-positive-a7: var(--color-green-a7);
+	--color-positive-a8: var(--color-green-a8);
+	--color-positive-a9: var(--color-green-a9);
+	--color-positive-a10: var(--color-green-a10);
+	--color-positive-a11: var(--color-green-a11);
+	--color-positive-a12: var(--color-green-a12);
+}

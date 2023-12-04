@@ -3,11 +3,19 @@ node_modules/
 .pnpm-store/
 
 # logs
-*.logs
+*.log
 
 # caches
 .eslintcache
+.stylelintcache
 *.tsbuildinfo
+
+# vercel
+.vercel
 
 # misc
 .DS_Store
+.idea/
+
+# build output
+dist/

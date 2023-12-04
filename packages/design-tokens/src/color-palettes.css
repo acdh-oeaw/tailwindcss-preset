@@ -1,0 +1,58 @@
+/**
+ * Color palettes.
+ * ------------------------------------------------------------------------------------------------
+ *
+ * 1: App background
+ * 2: Subtle background
+ * 3: UI element background
+ * 4: Hovered UI element background
+ * 5: Active / Selected UI element background
+ * 6: Subtle borders and separators
+ * 7: UI element border and focus rings
+ * 8: Hovered UI element border
+ * 9: Solid backgrounds
+ * 10: Hovered solid backgrounds
+ * 11: Low-contrast text
+ * 12: High-contrast text
+ *
+ * @see https://www.radix-ui.com/colors/docs/palette-composition/understanding-the-scale
+ */
+
+/* Neutrals. */
+@import url("./color-palettes/gray.css");
+@import url("./color-palettes/mauve.css");
+@import url("./color-palettes/slate.css");
+@import url("./color-palettes/sage.css");
+@import url("./color-palettes/olive.css");
+@import url("./color-palettes/sand.css");
+
+/* Colors. */
+@import url("./color-palettes/tomato.css");
+@import url("./color-palettes/red.css");
+@import url("./color-palettes/ruby.css");
+@import url("./color-palettes/crimson.css");
+@import url("./color-palettes/pink.css");
+@import url("./color-palettes/plum.css");
+@import url("./color-palettes/purple.css");
+@import url("./color-palettes/violet.css");
+@import url("./color-palettes/iris.css");
+@import url("./color-palettes/indigo.css");
+@import url("./color-palettes/blue.css");
+@import url("./color-palettes/cyan.css");
+@import url("./color-palettes/teal.css");
+@import url("./color-palettes/jade.css");
+@import url("./color-palettes/green.css");
+@import url("./color-palettes/grass.css");
+@import url("./color-palettes/bronze.css");
+@import url("./color-palettes/gold.css");
+@import url("./color-palettes/brown.css");
+@import url("./color-palettes/orange.css");
+@import url("./color-palettes/amber.css");
+@import url("./color-palettes/yellow.css");
+@import url("./color-palettes/lime.css");
+@import url("./color-palettes/mint.css");
+@import url("./color-palettes/sky.css");
+
+/* Opacities for shadows. */
+@import url("./color-palettes/black.css");
+@import url("./color-palettes/white.css");

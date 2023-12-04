@@ -1,0 +1,14 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "@acdh-oeaw/tsconfig-lib",
+	"compilerOptions": {
+		/**
+		 * Workaround for missing `nodenext` support in `colorjs.io`.
+		 *
+		 * @see https://github.com/LeaVerou/color.js/issues/332
+		 */
+		"module": "esnext",
+		"moduleResolution": "bundler"
+	},
+	"exclude": ["dist", "node_modules"]
+}

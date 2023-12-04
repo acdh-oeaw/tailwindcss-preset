@@ -1,0 +1,58 @@
+:where(.container) {
+	margin-inline: auto;
+	padding-inline: var(--space-2);
+	inline-size: 100%;
+	max-inline-size: var(--container-width);
+}
+
+:where(.grid-container) {
+	--_grid-container-width: var(--grid-container-width);
+	--_grid-container-columns: var(--grid-container-columns, 1);
+	--_grid-ontainer-row-gap: var(--grid-container-row-gap, 0);
+	--_grid-container-column-gap: var(--grid-container-column-gap, var(--space-2));
+
+	display: grid;
+	grid-template-columns:
+		minmax(0, 1fr) repeat(
+			var(--_grid-container-columns),
+			minmax(
+				0,
+				calc(
+					(
+							var(--_grid-container-width) - (var(--_grid-container-columns) - 1) *
+								var(--_grid-container-column-gap)
+						) / var(--_grid-container-columns)
+				)
+			)
+		)
+		minmax(0, 1fr);
+	row-gap: var(--_grid-container-row-gap);
+	overflow: clip;
+	padding-block: var(--_grid-container-row-gap);
+	column-gap: var(--_grid-container-column-gap);
+	inline-size: 100%;
+}
+
+:where(.grid-container > *),
+:where(.grid-container > .bleed-none) {
+	grid-column: 2 / -2;
+}
+
+:where(.grid-container > .full-bleed) {
+	grid-column: 1 / -1;
+}
+
+:where(.grid-container > .full-start) {
+	grid-column: 1 / -2;
+}
+
+:where(.grid-container > .full-end) {
+	grid-column: 2 / -1;
+}
+
+:where(.grid-fluid-cols) {
+	grid-template-columns: repeat(
+		var(--fluid-columns-mode, auto-fill),
+		minmax(var(--fluid-columns-min-width), 1fr)
+	);
+}

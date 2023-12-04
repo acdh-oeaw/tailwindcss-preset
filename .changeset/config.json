@@ -4,5 +4,8 @@
 	"baseBranch": "main",
 	"changelog": ["@changesets/changelog-github", { "repo": "acdh-oeaw/tailwindcss-preset" }],
 	"commit": false,
-	"updateInternalDependencies": "patch"
+	"updateInternalDependencies": "patch",
+	"___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+		"onlyUpdatePeerDependentsWhenOutOfRange": true
+	}
 }

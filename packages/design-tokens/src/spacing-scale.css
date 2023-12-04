@@ -1,0 +1,16 @@
+/**
+ * Spacing scale.
+ * ------------------------------------------------------------------------------------------------
+ */
+
+:where([data-ui]) {
+	--space-1: calc(4px * var(--scaling-factor));
+	--space-2: calc(8px * var(--scaling-factor));
+	--space-3: calc(12px * var(--scaling-factor));
+	--space-4: calc(16px * var(--scaling-factor));
+	--space-5: calc(24px * var(--scaling-factor));
+	--space-6: calc(32px * var(--scaling-factor));
+	--space-7: calc(40px * var(--scaling-factor));
+	--space-8: calc(48px * var(--scaling-factor));
+	--space-9: calc(64px * var(--scaling-factor));
+}

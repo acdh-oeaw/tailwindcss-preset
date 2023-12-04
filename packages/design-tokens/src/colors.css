@@ -1,0 +1,38 @@
+/**
+ * Colors.
+ * ------------------------------------------------------------------------------------------------
+ */
+
+:where([data-ui]) {
+	/**
+	 * Workaround for blink bug with box-shadow transitions from `transparent`,
+	 * and webkit bug with linear-gradients from `transparent`.
+	 */
+	--color-transparent: hsl(0deg 0% 0% / 0%);
+}
+
+:where([data-ui][data-ui-color-scheme="light"]) {
+	color-scheme: light;
+}
+
+:where([data-ui][data-ui-color-scheme="dark"]) {
+	color-scheme: dark;
+}
+
+:where([data-ui]) {
+	--color-background: var(--color-neutral-1);
+	--color-text: var(--color-neutral-12);
+	--color-selection: var(--color-accent-a5);
+	--color-focus-ring: var(--color-accent-8);
+
+	background-color: var(--color-background);
+	color: var(--color-text);
+}
+
+:where([data-ui] :focus-visible) {
+	outline-color: var(--color-focus-ring);
+}
+
+:where([data-ui] ::selection) {
+	background-color: var(--color-selection);
+}
