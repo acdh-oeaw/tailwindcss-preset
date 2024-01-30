@@ -1,5 +1,13 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.18
+
+### Patch Changes
+
+- [`28b1d2c`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/28b1d2c75b59c8c90906314b0bf8195962e86b2e)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - update deps, remove opinionated empty
+  grid cell workaround
+
 ## 0.0.17
 
 ### Patch Changes
