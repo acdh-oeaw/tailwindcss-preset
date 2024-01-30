@@ -658,13 +658,6 @@ export function createPlugin(options?: Options) {
 				{ values: theme("spacing")! },
 			);
 
-			/** @see https://github.com/w3c/csswg-drafts/issues/5813 */
-			addBase({
-				":where(.grid > :empty)": {
-					position: "absolute",
-				},
-			});
-
 			/** Typography. */
 			addBase({
 				":where(.prose)": {

@@ -3,6 +3,6 @@
 	"extends": "@acdh-oeaw/tsconfig-lib",
 	"compilerOptions": {
 		"module": "esnext",
-		"moduleResolution": "bundler"
-	}
+		"moduleResolution": "bundler",
+	},
 }
