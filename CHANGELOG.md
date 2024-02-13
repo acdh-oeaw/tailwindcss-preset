@@ -1,5 +1,12 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.20
+
+### Patch Changes
+
+- [`4aa3d6d`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/4aa3d6dc98719085419467aab422bc8b91f699a9)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - fix typography dark mode specificity
+
 ## 0.0.19
 
 ### Patch Changes
