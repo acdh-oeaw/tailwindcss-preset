@@ -319,7 +319,9 @@ export function createPlugin(options?: Options) {
 					"--ui-scaling-factor": "1",
 
 					/** Typography. */
-					"--font-family-body": "var(--font-sans, ui-sans-serif), system-ui, sans-serif",
+					"--font-family-body": "var(--font-body, ui-sans-serif), system-ui, sans-serif",
+					"--font-family-heading":
+						"var(--font-heading, var(--font-body, ui-sans-serif)), system-ui, sans-serif",
 
 					/** Font sizes. */
 					"--font-size-2xs": "calc(0.625rem * var(--ui-scaling-factor))",
@@ -364,6 +366,7 @@ export function createPlugin(options?: Options) {
 					"--space-3": "calc(0.75rem * var(--ui-scaling-factor))",
 					"--space-3_5": "calc(0.875rem * var(--ui-scaling-factor))",
 					"--space-4": "calc(1rem * var(--ui-scaling-factor))",
+					"--space-4_5": "calc(1.125rem * var(--ui-scaling-factor))",
 					"--space-5": "calc(1.25rem * var(--ui-scaling-factor))",
 					"--space-6": "calc(1.5rem * var(--ui-scaling-factor))",
 					"--space-7": "calc(1.75rem * var(--ui-scaling-factor))",
@@ -518,6 +521,10 @@ export function createPlugin(options?: Options) {
 				table: {
 					fontVariantNumeric: "tabular-nums",
 				},
+				textarea: {
+					fieldSizing: "content",
+					minBlockSize: "3lh",
+				},
 				"[id]": {
 					scrollMarginBlockStart: "2ex",
 				},
@@ -530,16 +537,6 @@ export function createPlugin(options?: Options) {
 					},
 				},
 			});
-
-			matchUtilities(
-				{
-					s(value: string) {
-						return { width: value, height: value };
-					},
-				},
-
-				{ values: theme("width")! },
-			);
 
 			matchUtilities(
 				{
@@ -660,7 +657,11 @@ export function createPlugin(options?: Options) {
 
 			/** Typography. */
 			addBase({
-				":where(.prose)": {
+				/**
+				 * Explicitly not wrapping in `:where()` here for higher specificity
+				 * than `@tailwindcss/typography`'s built in custom properties.
+				 */
+				".prose": {
 					"--tw-prose-body": "hsl(var(--color-neutral-700))",
 					"--tw-prose-headings": "hsl(var(--color-neutral-900))",
 					"--tw-prose-lead": "hsl(var(--color-neutral-600))",
@@ -678,7 +679,11 @@ export function createPlugin(options?: Options) {
 					"--tw-prose-th-borders": "hsl(var(--color-neutral-300))",
 					"--tw-prose-td-borders": "hsl(var(--color-neutral-200))",
 				},
-				':where([data-ui-color-scheme="dark"] .prose)': {
+				/**
+				 * Explicitly not wrapping in `:where()` here for higher specificity
+				 * than `@tailwindcss/typography`'s built in custom properties.
+				 */
+				'[data-ui-color-scheme="dark"] .prose': {
 					"--tw-prose-body": "hsl(var(--color-neutral-300))",
 					"--tw-prose-headings": "hsl(var(--color-neutral-0))",
 					"--tw-prose-lead": "hsl(var(--color-neutral-400))",
@@ -756,6 +761,7 @@ export function createPlugin(options?: Options) {
 				},
 				fontFamily: {
 					body: ["var(--font-family-body)"],
+					heading: ["var(--font-family-heading)"],
 				},
 				fontSize: {
 					"2xs": ["var(--font-size-2xs)", { lineHeight: "var(--line-height-2xs)" }],
@@ -784,6 +790,7 @@ export function createPlugin(options?: Options) {
 					"3": "var(--space-3)",
 					"3.5": "var(--space-3_5)",
 					"4": "var(--space-4)",
+					"4.5": "var(--space-4_5)",
 					"5": "var(--space-5)",
 					"6": "var(--space-6)",
 					"7": "var(--space-7)",

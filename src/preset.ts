@@ -11,7 +11,7 @@ export function createPreset(options?: Options) {
 		corePlugins: {
 			container: false,
 		},
-		darkMode: ["class", '[data-ui-color-scheme="dark"]'],
+		darkMode: ["selector", '[data-ui-color-scheme="dark"]'],
 		plugins: [animatePlugin, typographyPlugin, createPlugin(options)],
 	} satisfies Config;
 }

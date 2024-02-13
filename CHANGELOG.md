@@ -4,7 +4,8 @@
 
 ### Patch Changes
 
-- [`5671031`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/56710317743272981c7053536725495f0f4198b3) Thanks [@stefanprobst](https://github.com/stefanprobst)! - avoid dots in css custom property names
+- [`5671031`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/56710317743272981c7053536725495f0f4198b3)
+  Thanks [@stefanprobst](https://github.com/stefanprobst)! - avoid dots in css custom property names
 
 ## 0.0.18
 
