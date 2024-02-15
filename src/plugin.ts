@@ -536,6 +536,12 @@ export function createPlugin(options?: Options) {
 						scrollBehavior: "auto !important",
 					},
 				},
+				/** Scale up hit targets on high resolution mobile devices. */
+				"@media (resolution >= 200dpi)": {
+					":root": {
+						fontSize: "18px",
+					},
+				},
 			});
 
 			matchUtilities(
