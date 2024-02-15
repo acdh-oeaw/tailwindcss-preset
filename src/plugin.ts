@@ -424,7 +424,7 @@ export function createPlugin(options?: Options) {
 					"--color-on-informative": "var(--color-neutral-50)",
 					"--color-border": "var(--color-neutral-200)",
 					"--color-input": "var(--color-neutral-200)",
-					"--color-focus-ring": "var(--color-neutral-400)",
+					"--color-focus-ring": "var(--color-neutral-950)",
 				},
 				":root[data-ui-color-scheme=dark]": {
 					colorScheme: "dark",
@@ -454,7 +454,7 @@ export function createPlugin(options?: Options) {
 					"--color-on-informative": "var(--color-sky-50)",
 					"--color-border": "var(--color-neutral-800)",
 					"--color-input": "var(--color-neutral-800)",
-					"--color-focus-ring": "var(--color-neutral-800)",
+					"--color-focus-ring": "var(--color-neutral-300)",
 				},
 			});
 
