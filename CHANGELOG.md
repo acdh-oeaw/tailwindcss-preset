@@ -1,5 +1,11 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.21
+
+### Patch Changes
+
+- [`3970faa`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/3970faa23e26e8052aec4b58a103a7fbf6f0a11d) Thanks [@stefanprobst](https://github.com/stefanprobst)! - fix focus-ring color
+
 ## 0.0.20
 
 ### Patch Changes
