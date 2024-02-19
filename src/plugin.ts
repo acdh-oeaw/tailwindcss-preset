@@ -822,6 +822,11 @@ export function createPlugin(options?: Options) {
 					"72": "var(--space-72)",
 					"80": "var(--space-80)",
 					"96": "var(--space-96)",
+					...Object.fromEntries(
+						Object.entries(_breakpoints).map(([key, value]) => {
+							return [`screen-${key}`, value];
+						}),
+					),
 				},
 				screens: _breakpoints,
 				extend: {
