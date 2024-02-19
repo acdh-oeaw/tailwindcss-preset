@@ -1,5 +1,13 @@
 # @acdh-oeaw/tailwindcss-preset
 
+## 0.0.22
+
+### Patch Changes
+
+- [`ddb0be5`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/ddb0be5af2b7d768e0114c33a0cfd303c7f0b907) Thanks [@stefanprobst](https://github.com/stefanprobst)! - add screen spacing utils
+
+- [`856be67`](https://github.com/acdh-oeaw/tailwindcss-preset/commit/856be67bdc6dffd508905b4ec5aa949d090527bf) Thanks [@stefanprobst](https://github.com/stefanprobst)! - scale hit targets on hidpi
+
 ## 0.0.21
 
 ### Patch Changes
